@@ -1,4 +1,4 @@
-# Projeto de Automação de Testes para Agibank Blog
+# Projeto de Automação de Testes para o Agibank Blog
 
 **Este projeto é uma automação de testes para um blog utilizando a linguagem Java com Selenium WebDriver e JUnit.**
 
@@ -20,10 +20,8 @@
 
 ### 4. Executar Testes Via Linha de Comando com Maven
 > Navegue até o diretório do projeto no terminal:
-Copy code
-> cd caminho/para/Agibank-Blog-Automation
+**cd caminho/para/Agibank-Blog-Automation**
 
 ### Execute os testes com Maven:
-Copy code
 **mvn test**
 > Este comando irá compilar o projeto, baixar as dependências e executar todos os testes automatizados definidos no projeto.
