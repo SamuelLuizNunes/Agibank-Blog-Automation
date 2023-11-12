@@ -1,6 +1,7 @@
 package br.com.agibankBlog.automacaoWeb;
 
 import br.com.agibankBlog.core.Driver;
+import br.com.agibankBlog.enums.Browser;
 import br.com.agibankBlog.pages.PesquisaPage;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
@@ -12,25 +13,25 @@ public class PesquisaTest {
     PesquisaPage pesquisaPage;
 
     @BeforeEach
-    public void inicializaTeste() {
-        driver = new Driver("edge");
+    public void inicializaTest() {
+        driver = new Driver(Browser.CHROME);
         driver.getDriver().get("https://blogdoagi.com.br/");
         pesquisaPage = new PesquisaPage(driver.getDriver());
     }
 
     @AfterEach
-    public void finalizaTeste() {
+    public void finalizaTest() {
         driver.getDriver().quit();
     }
 
     @Test
-    public void deveAbrirBarraDePesquisa() {
+    public void deveAbrirBarraDePesquisaTest() {
         pesquisaPage.clickLupaDePesquisa();
         Assertions.assertTrue(pesquisaPage.campoDePesquisaAberto());
     }
 
     @Test
-    public void deveFecharBarraDePesquisa() {
+    public void deveFecharBarraDePesquisaTest() {
         pesquisaPage.clickLupaDePesquisa();
         Assertions.assertTrue(pesquisaPage.campoDePesquisaAberto());
         pesquisaPage.clickLupaDePesquisa();
