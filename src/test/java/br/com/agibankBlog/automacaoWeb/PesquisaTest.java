@@ -45,5 +45,4 @@ public class PesquisaTest {
         Assertions.assertTrue(pesquisaPage.campoDePesquisaFechado());
         pesquisaPage.screenshot("campoPesquisaFechado.png");
     }
-
 }
